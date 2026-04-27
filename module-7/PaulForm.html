@@ -1,0 +1,104 @@
+<!--Paul Fralix CSD440 Assignment 7.2 04/26/2026-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paul Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background: white;
+            width: 450px;
+            margin: 0 auto;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 12px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+        }
+
+        input[type="radio"] {
+            width: auto;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            background: #0077cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background: #005fa3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>User Information Form</h1>
+
+<form action="PaulResponse.php" method="post">
+
+    <label>Full Name:</label>
+    <input type="text" name="fullname" required>
+
+    <label>Email Address:</label>
+    <input type="email" name="email" required>
+
+    <label>Age:</label>
+    <input type="number" name="age" min="1" max="120" required>
+
+    <label>Monthly Income ($):</label>
+    <input type="number" name="income" step="0.01" min="0" required>
+
+    <label>Start Date:</label>
+    <input type="date" name="startdate" required>
+
+    <label>Department:</label>
+    <select name="department" required>
+        <option value="">-- Select One --</option>
+        <option value="IT">IT</option>
+        <option value="HR">HR</option>
+        <option value="Finance">Finance</option>
+        <option value="Marketing">Marketing</option>
+    </select>
+
+    <label>Employment Type:</label>
+    <input type="radio" name="emptype" value="Full-Time" required> Full-Time<br>
+    <input type="radio" name="emptype" value="Part-Time"> Part-Time<br>
+    <input type="radio" name="emptype" value="Contract"> Contract<br>
+
+    <input type="submit" value="Submit Form">
+
+</form>
+
+</body>
+</html>
